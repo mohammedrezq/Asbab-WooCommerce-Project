@@ -159,8 +159,10 @@ if ( ! function_exists( 'asbab_woocommerce_wrapper_before' ) ) {
 	 */
 	function asbab_woocommerce_wrapper_before() {
 		?>
-		<div id="primary" class="content-area">
-			<main id="main" class="site-main" role="main">
+        <section class="htc__product__grid bg__white ptb--100">
+            <div class="container">
+                <div class="row">
+<!--        <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 col-sm-12 col-xs-12">-->
 			<?php
 	}
 }
@@ -176,8 +178,10 @@ if ( ! function_exists( 'asbab_woocommerce_wrapper_after' ) ) {
 	 */
 	function asbab_woocommerce_wrapper_after() {
 			?>
-			</main><!-- #main -->
-		</div><!-- #primary -->
+<!--        </div><!-- cols -->
+			</div><!-- .row -->
+		</div><!-- .container -->
+        </section><!-- section .htc__product__grid -->
 		<?php
 	}
 }
