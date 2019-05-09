@@ -204,3 +204,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 if ( class_exists( 'WooCommerce' ) ) {
 	require get_template_directory() . '/inc/woocommerce.php';
 }
+
+
+/*filter to increase upload size important*/ /*Very Important*/
+//filter
+add_filter('upload_size_limit', 'increase_upload');
+function increase_upload($bytes) {
+    return 134217728;
+}
+
+
+
+/*Increase Maximum upload Size*/
+@ini_set( 'upload_max_size' , '128M' );
+@ini_set( 'post_max_size', '128M');
+@ini_set( 'max_execution_time', '300' );
