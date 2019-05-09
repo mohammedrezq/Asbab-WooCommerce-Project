@@ -50,7 +50,7 @@
 }
 .slider__inner h1 {
     color: #030303;
-    font-family: Old Standard TT;
+    font-family: Old Standard TT, serif;
     font-size: 89px;
     margin-bottom: 14px;
     margin-top: 31px;
@@ -60,7 +60,7 @@
     background: #c43b68 none repeat scroll 0 0;
     color: #fff;
     display: inline-block;
-    font-family: Poppins;
+    font-family: Poppins, sans-serif;
     font-size: 15px;
     font-weight: 400;
     height: 50px;
@@ -221,5 +221,5 @@
   padding-right: 20px;
 }
 .slider__activation__wrap--5 .single-slide:focus{
-  outline: none;}
+  outline: none;
 }

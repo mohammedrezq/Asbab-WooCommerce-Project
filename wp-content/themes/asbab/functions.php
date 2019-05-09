@@ -122,7 +122,14 @@ add_action( 'widgets_init', 'asbab_widgets_init' );
 function asbab_scripts() {
 
 
+    /*Asbab Fonts*/
+    wp_enqueue_style('asbab-fonts','https://fonts.googleapis.com/css?family=Old+Standard+TT|Poppins:400,600');
+
+
     /*Asbab Main Styles*/
+    wp_enqueue_style('asbab-main-css', get_template_directory_uri() .'/main.css', array(), '20190509');
+
+
     wp_enqueue_style('asbab-bootstrap', get_template_directory_uri() .'/css/bootstrap.min.css', array(), '20190508');
 
     wp_enqueue_style('asbab-owlcss', get_template_directory_uri() .'/css/owl.carousel.min.css', array(), '20190508');
