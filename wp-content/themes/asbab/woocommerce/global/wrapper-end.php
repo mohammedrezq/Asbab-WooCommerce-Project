@@ -19,7 +19,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
-?><?php
-
-    echo '</section></div></div>';
-?>
+ echo '
+</div>
+	</div>
+   		 </section>';

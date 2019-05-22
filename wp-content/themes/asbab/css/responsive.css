@@ -730,7 +730,7 @@ nav.off__canvars--menu ul li {
   margin-bottom: 20px
 }
 .buttons-cart a:first-child {
-  margin-top: 20px;
+  margin-top: 0;
 }
 .ht__coupon__code {
   padding: 54px 10px;

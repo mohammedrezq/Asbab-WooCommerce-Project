@@ -61,3 +61,44 @@ ul.products {
 		}
 	}
 }
+
+nav.woocommerce-pagination {
+	ul.page-numbers{
+		list-style: none;
+		display: flex;
+		justify-content: center;
+		margin-top: 60px;
+		flex-wrap: wrap;
+		li {
+			margin: 0 5px;
+          a.page-numbers{
+			  background: #f6f6f6 none repeat scroll 0 0;
+			  border-radius: 100%;
+			  color: #3f3f3f;
+			  display: inline-block;
+			  font-family: "Poppins",sans-serif;
+			  font-size: 13px;
+			  font-weight: 600;
+			  height: 45px;
+			  line-height: 45px;
+			  text-align: center;
+			  transition: all 0.3s ease 0s;
+			  width: 45px;
+		  }
+		span.page-numbers.current {
+			background: #c43b68 none repeat scroll 0 0;
+			color: #fff;
+			border-radius: 100%;
+			display: inline-block;
+			font-family: "Poppins",sans-serif;
+			font-size: 13px;
+			font-weight: 600;
+			height: 45px;
+			line-height: 45px;
+			text-align: center;
+			transition: all 0.3s ease 0s;
+			width: 45px;
+		}
+		}
+	}
+}

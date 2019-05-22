@@ -113,6 +113,16 @@ function asbab_widgets_init() {
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
 	) );
+
+    register_sidebar( array(
+        'name'          => esc_html__( 'Shop Widgets', 'asbab' ),
+        'id'            => 'sidebar-shop',
+        'description'   => esc_html__( 'Add shop widgets here.', 'asbab' ),
+        'before_widget' => '<section id="%1$s" class="htc__product__leftsidebar shop-widgets widget %2$s">',
+        'after_widget'  => '</section>',
+        'before_title'  => '<h2 class="widget-title shop-widget-title">',
+        'after_title'   => '</h2>',
+    ) );
 }
 add_action( 'widgets_init', 'asbab_widgets_init' );
 
@@ -226,3 +236,140 @@ function increase_upload($bytes) {
 @ini_set( 'upload_max_size' , '128M' );
 @ini_set( 'post_max_size', '128M');
 @ini_set( 'max_execution_time', '300' );
+
+
+
+/*WooCommerce Hooks removal and addition*/
+remove_action('woocommerce_before_main_content','woocommerce_output_content_wrapper',10);
+
+remove_action('woocommerce_after_main_content','woocommerce_output_content_wrapper_end', 10);
+
+add_action('woocommerce_before_main_content','asbab_before_main_content',10);
+add_action('woocommerce_after_main_content','asbab_after_main_content',10);
+
+
+function asbab_before_main_content(){
+    echo '<section class="htc__product__grid bg__white ptb--100"><div class="container"><div class="row">';
+}
+
+function asbab_after_main_content(){
+    echo '</div></div></section>';
+}
+
+
+function asbab_sorting_wrapper() {
+    echo '<div class="asbab-sorting">';
+}
+
+function asbab_sorting_wrapper_close() {
+    echo '</div>';
+}
+
+add_action('woocommerce_before_shop_loop','asbab_sorting_wrapper',9);
+add_action('woocommerce_before_shop_loop','asbab_sorting_wrapper_close',31);
+
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 20 );
+remove_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 30 );
+
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_result_count', 30 );
+add_action( 'woocommerce_before_shop_loop', 'woocommerce_catalog_ordering', 20 );
+
+//add_action('woocommerce_after_shop_loop_item','woocommerce_template_loop_rating',30);
+//add_action( 'woocommerce_after_shop_loop_item', 'woocommerce_widget_shopping_cart_button_view_cart',20);
+
+//remove_action('woocommerce_before_shop_loop','woocommerce_catalog_ordering', 30);
+
+
+add_action( 'woocommerce_after_shop_loop_item_title', 'output_product_excerpt', 20 );
+function output_product_excerpt() {
+    global $post;
+
+    //get the individual products' categories and put them in an array
+    $terms = wp_get_post_terms( $post->ID, 'product_cat' );
+    foreach ( $terms as $term ) {
+        $product_categories[] = $term->term_id;
+    };
+
+    //check if the array contains your specific $category_id that you are targeting
+//    if ( is_shop() && in_array( $category_id, $product_categories )) {
+        echo '<div class="my-excerpt">'.wp_trim_words($post->post_excerpt,20).'</div>';
+//    }
+}
+
+
+
+/**
+ * Output the view cart button.
+ */
+//function woocommerce_widget_shopping_cart_button_view_cart() {
+//    echo '<a href="' . esc_url( wc_get_cart_url() ) . '" class="button wc-forward">' . esc_html__( 'View cart', 'woocommerce' ) . '</a>';
+//}
+
+// always display rating stars // source : https://wordpress.org/support/topic/woocommerce-always-show-stars-even-with-no-reviews/
+//Mohammed Rezq
+function filter_woocommerce_product_get_rating_html( $rating_html, $rating, $count ) {
+    $rating_html  = '<div class="star-rating">';
+    $rating_html .= wc_get_star_rating_html( $rating, $count );
+    $rating_html .= '</div>';
+
+    return $rating_html;
+};
+add_filter( 'woocommerce_product_get_rating_html', 'filter_woocommerce_product_get_rating_html', 10, 3 );
+
+/*Change Breadcrumb separator*/
+
+add_filter('woocommerce_breadcrumb_defaults','asbab_breadcrumb');
+function asbab_breadcrumb($breadcrumb){
+    $breadcrumb['delimiter']    = ' &gt; ';
+    $breadcrumb['wrap_before']  = '<nav class="woocommerce-breadcrumb bradcaump-inner">';
+	$breadcrumb['wrap_after']   = '</nav>';
+
+    return $breadcrumb;
+}
+
+/* Add customized Breadcrumbs to the header Main Image */
+
+
+add_action('woocommerce_asbab_breadcrumb_items','woocommerce_breadcrumb',10);
+
+/*remove breadcrumbs from the top of the shop products !*/
+remove_action('woocommerce_before_main_content','woocommerce_breadcrumb',20);
+
+
+/* Add bootstrap grid for products loop and sidebar */
+
+add_action('woocommerce_before_shop_loop','asbab_open_grid_loop_columns',5);
+function asbab_open_grid_loop_columns(){
+    echo "<div class='col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 col-sm-12 col-xs-12'>";
+}
+
+add_action('woocommerce_after_shop_loop','asbab_close_grid_loop_columns',100);
+function asbab_close_grid_loop_columns(){
+    echo "</div>";
+}
+
+
+add_action('woocommerce_cart_actions', 'asbab_update_cart');
+function asbab_update_cart(){
+    echo "";
+}
+
+add_action( 'woocommerce_update_cart_action_cart_updated', 'on_action_cart_updated', 20, 1 );
+function on_action_cart_updated( $cart_updated ){
+
+    $applied_coupons = WC()->cart->get_applied_coupons();
+
+    if( count( $applied_coupons ) > 0 ){
+        $new_value        = WC()->cart->get_cart_subtotal();
+        $discounted       = WC()->cart->coupon_discount_totals;
+        $discounted_value = array_values($discounted)[0];
+        $new_value        = $new_value-$discounted_value + 100;
+
+        WC()->cart->set_total( $new_value );
+
+        if ( $cart_updated ) {
+            // Recalc our totals
+            WC()->cart->calculate_totals();
+        }
+    }
+}

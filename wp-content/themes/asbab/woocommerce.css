@@ -59,13 +59,19 @@ table.shop_table_responsive tr td.download-actions .button {
 		display: table-cell;
 	}
 	table.shop_table_responsive tr th, table.shop_table_responsive tr td {
-		text-align: left;
+		text-align: center;
 	}
 	table.shop_table_responsive tr td {
 		display: table-cell;
 	}
 	table.shop_table_responsive tr td:before {
 		display: none;
+	}
+	table.shop_table_responsive tr th,
+	table.shop_table_responsive tr td {
+		text-align: left;
+		font-size: 1rem;
+		font-weight: 500;
 	}
 }
 
@@ -132,6 +138,48 @@ ul.products li.product .button {
 	.columns-6 ul.products li.product {
 		width: 13.49333%;
 	}
+}
+
+nav.woocommerce-pagination ul.page-numbers {
+	list-style: none;
+	display: flex;
+	justify-content: center;
+	margin-top: 60px;
+	flex-wrap: wrap;
+}
+
+nav.woocommerce-pagination ul.page-numbers li {
+	margin: 0 5px;
+}
+
+nav.woocommerce-pagination ul.page-numbers li a.page-numbers {
+	background: #f6f6f6 none repeat scroll 0 0;
+	border-radius: 100%;
+	color: #3f3f3f;
+	display: inline-block;
+	font-family: "Poppins",sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	width: 45px;
+}
+
+nav.woocommerce-pagination ul.page-numbers li span.page-numbers.current {
+	background: #c43b68 none repeat scroll 0 0;
+	color: #fff;
+	border-radius: 100%;
+	display: inline-block;
+	font-family: "Poppins",sans-serif;
+	font-size: 13px;
+	font-weight: 600;
+	height: 45px;
+	line-height: 45px;
+	text-align: center;
+	transition: all 0.3s ease 0s;
+	width: 45px;
 }
 
 /**
@@ -242,7 +290,7 @@ ul.products li.product .button {
 }
 
 .stock.in-stock {
-	color: #0f834d;
+	color: #adff2f;
 }
 
 .stock.out-of-stock {
@@ -268,6 +316,99 @@ ul.products li.product .button {
 	.col2-set .form-row-last {
 		width: 48.1%;
 	}
+}
+
+/**
+ * Cart
+ */
+label.asbab-coupon-label {
+	display: block;
+	color: #3f3f3f;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	text-transform: uppercase;
+	font-size: .9rem;
+	margin-bottom: 5px;
+}
+
+.ht__coupon__code > button.button {
+	background: #212121 none repeat scroll 0 0;
+	border-radius: unset;
+	color: white;
+	font-size: .9rem;
+	line-height: 56px;
+	font-weight: 500;
+	height: 56px;
+	padding: 0 27px;
+	margin-left: -101px;
+	text-transform: uppercase;
+}
+
+.coupon input[type=text] {
+	background: white;
+	border: none;
+	float: left;
+	height: 56px;
+	margin: 0 6px 20px 0;
+	max-width: 100%;
+	padding: 0 100px 0 10px;
+	width: 100%;
+}
+
+.col-md-6 > .buttons-cart > button.button.checkout--btn {
+	background: #ebebeb none repeat scroll 0 0;
+	float: right;
+	color: #3f3f3f;
+	font-family: 'Poppins', sans-serif;
+	font-size: 12px;
+	border: none;
+	border-radius: initial;
+	font-weight: 500;
+	height: 62px;
+	line-height: 62px;
+	padding: 0 33px;
+	text-transform: uppercase;
+	display: inline-block;
+}
+
+.row.asbab-cart-buttons {
+	margin-bottom: 70px;
+}
+
+.buttons-cart a {
+	border-radius: unset;
+	color: #3f3f3f;
+}
+
+a.btn.asbab-btn-checkout {
+	float: right;
+	margin-left: 1rem;
+}
+
+.buttons-cart {
+	margin-top: 0.5rem;
+}
+
+.wc-proceed-to-checkout a {
+	background: #252525 none repeat scroll 0 0;
+	/* display: block; */
+	color: #fff;
+	font-size: 14px;
+	font-weight: 700;
+	height: 50px;
+	width: 100%;
+	justify-content: center;
+	display: flex;
+	line-height: 50px;
+	margin-top: 20px;
+	padding: 0 30px;
+	text-transform: none;
+}
+
+a.woocommerce-remove-coupon {
+	color: black;
+	background: #f5f5f4;
+	padding: 10px;
 }
 
 /**
@@ -427,7 +568,7 @@ p.stars.selected a:not(.active):before {
 }
 
 .woocommerce-password-strength.strong {
-	color: #0f834d;
+	color: #adff2f;
 }
 
 .woocommerce-password-strength.short {
@@ -446,7 +587,7 @@ p.stars.selected a:not(.active):before {
  * Forms
  */
 .form-row.woocommerce-validated input.input-text {
-	box-shadow: inset 2px 0 0 #0f834d;
+	box-shadow: inset 2px 0 0 #adff2f;
 }
 
 .form-row.woocommerce-invalid input.input-text {
@@ -468,7 +609,7 @@ p.no-comments {
 	content: "";
 	display: table;
 	table-layout: fixed;
-	background-color: #0f834d;
+	background-color: #adff2f;
 	clear: both;
 }
 

@@ -76,7 +76,7 @@ add_filter( 'body_class', 'asbab_woocommerce_active_body_class' );
  * @return integer number of products.
  */
 function asbab_woocommerce_products_per_page() {
-	return 12;
+	return 9;
 }
 add_filter( 'loop_shop_per_page', 'asbab_woocommerce_products_per_page' );
 
@@ -159,10 +159,6 @@ if ( ! function_exists( 'asbab_woocommerce_wrapper_before' ) ) {
 	 */
 	function asbab_woocommerce_wrapper_before() {
 		?>
-        <section class="htc__product__grid bg__white ptb--100">
-            <div class="container">
-                <div class="row">
-<!--        <div class="col-lg-9 col-lg-push-3 col-md-9 col-md-push-3 col-sm-12 col-xs-12">-->
 			<?php
 	}
 }
@@ -178,10 +174,6 @@ if ( ! function_exists( 'asbab_woocommerce_wrapper_after' ) ) {
 	 */
 	function asbab_woocommerce_wrapper_after() {
 			?>
-<!--        </div><!-- cols -->
-			</div><!-- .row -->
-		</div><!-- .container -->
-        </section><!-- section .htc__product__grid -->
 		<?php
 	}
 }

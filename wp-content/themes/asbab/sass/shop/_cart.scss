@@ -1,0 +1,98 @@
+label.asbab-coupon-label {
+  display: block;
+  color: #3f3f3f;
+  font-family: 'Poppins', sans-serif;
+  font-weight: 500;
+  text-transform: uppercase;
+  font-size: .9rem;
+  margin-bottom: 5px;
+}
+
+.ht__coupon__code > button.button {
+  background: #212121 none repeat scroll 0 0;
+  border-radius: unset;
+  color: white;
+  font-size: .9rem;
+  line-height: 56px;
+  font-weight: 500;
+  height: 56px;
+  padding: 0 27px;
+  margin-left: -101px;
+  text-transform: uppercase;
+}
+
+.coupon input[type=text] {
+  background: white;
+  border: none;
+  float: left;
+  height: 56px;
+  margin: 0 6px 20px 0;
+  max-width: 100%;
+  padding: 0 100px 0 10px;
+  width: 100%;
+}
+
+.col-md-6 > .buttons-cart >button.button.checkout--btn {
+  background: #ebebeb none repeat scroll 0 0;
+  float: right;
+  color: #3f3f3f;
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  border: none;
+  border-radius: initial;
+  font-weight: 500;
+  height: 62px;
+  line-height: 62px;
+  padding: 0 33px;
+  text-transform: uppercase;
+  display: inline-block;
+}
+
+.row.asbab-cart-buttons {
+  margin-bottom: 70px;
+}
+
+.buttons-cart a{
+  border-radius: unset;
+  color: #3f3f3f;
+}
+
+a.btn.asbab-btn-checkout {
+  float: right;
+  margin-left: 1rem;
+}
+
+.buttons-cart {
+  margin-top: 0.5rem;
+}
+
+
+.wc-proceed-to-checkout a {
+  background: #252525 none repeat scroll 0 0;
+  /* display: block; */
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  height: 50px;
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  line-height: 50px;
+  margin-top: 20px;
+  padding: 0 30px;
+  text-transform: none;
+}
+
+a.woocommerce-remove-coupon {
+  color: black;
+  background: #f5f5f4;
+  padding: 10px;
+}
+
+
+
+
+
+@media screen and (max-width: 592px){
+
+}

@@ -23,7 +23,7 @@
 <body <?php body_class(); ?>>
 
 <!-- Body main wrapper start -->
-<div class="wrapper">
+<!--<div class="wrapper">-->
     <!-- Start Header Style -->
     <header id="htc__header" class="htc__header__area header--one">
         <!-- Start Mainmenu Area -->
@@ -33,7 +33,7 @@
                     <div class="menumenu__container clearfix">
                         <div class="col-lg-2 col-md-2 col-sm-3 col-xs-5">
                             <div class="logo">
-                                <a href="index.html"><img src="images/logo/4.png" alt="logo images"></a>
+                                <a href="index.html"><img src="<?php bloginfo('stylesheet_directory'); ?>/images/logo/4.png" alt="logo images"></a>
                             </div>
                         </div>
                         <div class="col-md-7 col-lg-8 col-sm-5 col-xs-3">
@@ -184,4 +184,24 @@
         <!-- End Mainmenu Area -->
     </header>
     <!-- End Header Area -->
-	<div id="content" class="site-content">
+
+<div class="body__overlay"></div>
+
+<!-- Start Bradcaump area -->
+<div class="ht__bradcaump__area" style="background: rgba(0, 0, 0, 0) url(<?php bloginfo('stylesheet_directory');?>/images/bg/4.jpg) no-repeat scroll center center / cover ;">
+    <div class="ht__bradcaump__wrap">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12">
+                    <div class="bradcaump__inner">
+                        <?php
+                        do_action('woocommerce_asbab_breadcrumb_items');
+                        ?>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Bradcaump area -->
+
