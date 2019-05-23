@@ -340,7 +340,7 @@ label.asbab-coupon-label {
 	font-weight: 500;
 	height: 56px;
 	padding: 0 27px;
-	margin-left: -101px;
+	margin-left: -98px;
 	text-transform: uppercase;
 }
 
@@ -409,6 +409,34 @@ a.woocommerce-remove-coupon {
 	color: black;
 	background: #f5f5f4;
 	padding: 10px;
+}
+
+a.btn.asbab-btn-shopping {
+	background: #ebebeb none repeat scroll 0 0;
+	color: #252525;
+	font-size: .9rem;
+	justify-content: center;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 500;
+	margin-top: 10px;
+	border-radius: unset;
+	height: 65px;
+	/* padding: 0; */
+	line-height: 65px;
+	text-align: center;
+	text-transform: uppercase;
+	transition: all 0.4s ease 0s;
+}
+
+a.btn.asbab-btn-shopping:hover {
+	background: #252525;
+	color: #ffffff;
+	font-size: .9rem;
+}
+
+a.btn.asbab-btn-shopping.asbab_cart-totals_shopping {
+	display: flex;
+	line-height: 50px !important;
 }
 
 /**

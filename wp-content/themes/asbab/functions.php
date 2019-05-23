@@ -354,6 +354,24 @@ function asbab_update_cart(){
     echo "";
 }
 
+add_action('woocommerce_cart_actions', 'asbab_continue_shopping_after_cart_totals',20);
+
+function asbab_continue_shopping_after_cart_totals(){
+
+    $checkout_link = get_permalink( wc_get_page_id( 'checkout' ) );
+
+    echo "<div><a href='$checkout_link'<?php class='btn asbab-btn-checkout'>Checkout</a></div>";
+}
+
+
+add_action('woocommerce_cart_actions','asbab_update_after_cart_table',30);
+
+function asbab_update_after_cart_table(){
+
+    echo "<button type='submit' class='button checkout--btn' name='update_cart' value='Update Cart'>Update Cart</button>";
+}
+
+
 add_action( 'woocommerce_update_cart_action_cart_updated', 'on_action_cart_updated', 20, 1 );
 function on_action_cart_updated( $cart_updated ){
 
@@ -372,4 +390,12 @@ function on_action_cart_updated( $cart_updated ){
             WC()->cart->calculate_totals();
         }
     }
+}
+
+add_action('woocommerce_after_cart_totals','asbab_continue_shopping_after_cart_totals_2',10);
+function asbab_continue_shopping_after_cart_totals_2(){
+
+    $shop_link = get_permalink( wc_get_page_id( 'shop' ) );
+
+    echo "<div><a href='$shop_link'<?php class='btn asbab-btn-shopping asbab_cart-totals_shopping'>Continue Shopping</a></div>";
 }

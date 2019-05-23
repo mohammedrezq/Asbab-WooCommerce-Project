@@ -154,14 +154,14 @@ do_action( 'woocommerce_before_cart' ); ?>
         </div>
         <div class="col-md-6 d-flex">
             <div class="buttons-cart">
-            <a href="<?php echo get_permalink( wc_get_page_id( 'checkout' ) ); ?>" class="btn asbab-btn-checkout">Checkout</a>
+                <?php do_action( 'woocommerce_cart_actions' ); ?>
 
-                <button type="submit" class="button checkout--btn" name="update_cart" value="<?php esc_attr_e( 'Update cart', 'woocommerce' ); ?>"><?php esc_html_e( 'Update cart', 'woocommerce' ); ?></button>
+<!--                <button type="submit" class="button checkout--btn" name="update_cart" value="--><?php //esc_attr_e( 'Update cart', 'woocommerce' ); ?><!--">--><?php //esc_html_e( 'Update cart', 'woocommerce' ); ?><!--</button>-->
 
             </div>
 
 
-            <?php do_action( 'woocommerce_cart_actions' ); ?>
+<!--            --><?php //do_action( 'woocommerce_cart_actions' ); ?>
 
             <?php wp_nonce_field( 'woocommerce-cart', 'woocommerce-cart-nonce' ); ?>
 
