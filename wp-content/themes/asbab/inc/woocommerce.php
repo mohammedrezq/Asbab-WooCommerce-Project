@@ -16,7 +16,10 @@
  * @return void
  */
 function asbab_woocommerce_setup() {
-	add_theme_support( 'woocommerce' );
+	add_theme_support( 'woocommerce', array(
+        'thumbnail_image_width' => 300,
+        'single_image_width'    => 477,
+    ) );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );
 	add_theme_support( 'wc-product-gallery-slider' );

@@ -399,3 +399,7 @@ function asbab_continue_shopping_after_cart_totals_2(){
 
     echo "<div><a href='$shop_link'<?php class='btn asbab-btn-shopping asbab_cart-totals_shopping'>Continue Shopping</a></div>";
 }
+
+/*remove sidebar from single-product */
+//
+//remove_action('woocommerce_sidebar','woocommerce_get_sidebar',10);
