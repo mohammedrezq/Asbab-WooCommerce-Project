@@ -6,8 +6,9 @@
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+    <div class="checkout-wrap pt--30">
+        <div class="container">
+            <div class="row">
 
 		<?php
 		while ( have_posts() ) :
@@ -23,8 +24,9 @@ get_header();
 		endwhile; // End of the loop.
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+            </div><!-- .row -->
+        </div><!-- .container -->
+    </div><!-- .checkout-wrap -->
 
 <?php
 //get_sidebar();

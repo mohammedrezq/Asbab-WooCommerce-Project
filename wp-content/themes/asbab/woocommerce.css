@@ -319,6 +319,33 @@ nav.woocommerce-pagination ul.page-numbers li span.page-numbers.current {
 }
 
 /**
+Checkout /Mohammed Rezq
+*/
+.col-md-4.asbab_order_products_checkout {
+	background: #f4f4f4;
+	padding: 1.5rem;
+}
+
+.asbab-your-order-title.text-center {
+	padding: 30px 0;
+	margin: 0 15px;
+	border-bottom: 1px solid #ebebeb;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 16px;
+	font-weight: 600;
+	color: #3f3f3f;
+}
+
+div#order_review {
+	margin-top: 1em;
+}
+
+.woocommerce-form-coupon-toggle {
+	margin-bottom: 1rem;
+}
+
+/**
  * Cart
  */
 label.asbab-coupon-label {
@@ -608,7 +635,7 @@ p.stars.selected a:not(.active):before {
 }
 
 .woocommerce-password-strength.good {
-	color: #3D9CD2;
+	color: #ffbcd0;
 }
 
 /**
@@ -644,7 +671,7 @@ p.no-comments {
 .woocommerce-info,
 .woocommerce-noreviews,
 p.no-comments {
-	background-color: #3D9CD2;
+	background-color: #ffbcd0;
 }
 
 .woocommerce-error {
@@ -658,7 +685,7 @@ p.no-comments {
 	right: 0;
 	margin: 0;
 	padding: 1em;
-	background-color: #3D9CD2;
+	background-color: #ffbcd0;
 	z-index: 9999;
 }
 
