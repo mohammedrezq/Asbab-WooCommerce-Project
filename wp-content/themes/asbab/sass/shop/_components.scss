@@ -136,20 +136,33 @@ p.stars {
  */
 .woocommerce-tabs {
 	ul.tabs {
+		display: flex;
 		list-style: none;
+		border: 1px solid #dad8d8;
 		margin: 0;
 		padding: 0;
 		text-align: left;
 
 		li {
 			display: block;
-			margin: 0;
 			position: relative;
+			margin: 0 1px 0 0;
+			border-right: 1px solid #dad8d8;
+			padding: 0 10px;
 
 			a {
-				padding: 1em 0;
+				padding: 1em 20px;
+				margin: 0 -12px;
 				display: block;
+				color: #9f9f9f;
+				font-weight: 600;
+				font-size: .9rem;
+				text-transform: uppercase;
 			}
+		}
+
+		li.active a {
+			color: #333333;
 		}
 	}
 
@@ -158,6 +171,10 @@ p.stars {
 			margin-bottom: 1em;
 		}
 	}
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+	margin-top: 3em;
 }
 
 /**

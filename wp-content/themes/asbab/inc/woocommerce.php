@@ -18,7 +18,7 @@
 function asbab_woocommerce_setup() {
 	add_theme_support( 'woocommerce', array(
         'thumbnail_image_width' => 300,
-        'single_image_width'    => 477,
+        'single_image_width'    => 500,
     ) );
 	add_theme_support( 'wc-product-gallery-zoom' );
 	add_theme_support( 'wc-product-gallery-lightbox' );

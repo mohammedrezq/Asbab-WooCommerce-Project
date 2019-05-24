@@ -594,7 +594,9 @@ p.stars.selected a:not(.active):before {
  * Tabs
  */
 .woocommerce-tabs ul.tabs {
+	display: flex;
 	list-style: none;
+	border: 1px solid #dad8d8;
 	margin: 0;
 	padding: 0;
 	text-align: left;
@@ -602,17 +604,32 @@ p.stars.selected a:not(.active):before {
 
 .woocommerce-tabs ul.tabs li {
 	display: block;
-	margin: 0;
 	position: relative;
+	margin: 0 1px 0 0;
+	border-right: 1px solid #dad8d8;
+	padding: 0 10px;
 }
 
 .woocommerce-tabs ul.tabs li a {
-	padding: 1em 0;
+	padding: 1em 20px;
+	margin: 0 -12px;
 	display: block;
+	color: #9f9f9f;
+	font-weight: 600;
+	font-size: .9rem;
+	text-transform: uppercase;
+}
+
+.woocommerce-tabs ul.tabs li.active a {
+	color: #333333;
 }
 
 .woocommerce-tabs .panel h2:first-of-type {
 	margin-bottom: 1em;
+}
+
+.woocommerce-tabs.wc-tabs-wrapper {
+	margin-top: 3em;
 }
 
 /**
