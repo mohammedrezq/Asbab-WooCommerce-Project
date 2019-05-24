@@ -376,6 +376,18 @@ template {
 	display: none;
 }
 
+/*
+html & body
+min-width = 100%
+overflow-x = hidden;
+Mohammed Rezq
+*/
+html,
+body {
+	min-width: 100%;
+	overflow-x: hidden;
+}
+
 /*--------------------------------------------------------------
 # Typography
 --------------------------------------------------------------*/

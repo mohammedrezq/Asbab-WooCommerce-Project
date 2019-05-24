@@ -249,7 +249,7 @@ add_action('woocommerce_after_main_content','asbab_after_main_content',10);
 
 
 function asbab_before_main_content(){
-    echo '<section class="htc__product__grid bg__white ptb--100"><div class="container"><div class="row">';
+    echo '<section class="htc__product__grid bg__white ptb--30"><div class="container"><div class="row">';
 }
 
 function asbab_after_main_content(){

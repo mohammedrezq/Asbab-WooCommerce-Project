@@ -19,4 +19,4 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit; // Exit if accessed directly
 }
 
- echo'      <section class="htc__product__grid bg__white ptb--100"><div         class="container"><div class="row">';
+ echo'<section class="htc__product__grid bg__white ptb--30"><div         class="container"><div class="row">';

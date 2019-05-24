@@ -3,7 +3,7 @@
  */
 .single-product {
 	div.product {
-		@include clearfix;
+		//@include clearfix;
 		position: relative;
 
 		.woocommerce-product-gallery {
@@ -11,8 +11,8 @@
 
 			.woocommerce-product-gallery__trigger {
 				position: absolute;
-				top: 1em;
-				right: 1em;
+				top: 2em;
+				right: 2em;
 				display: block;
 				z-index: 99;
 			}
@@ -80,4 +80,38 @@
 	&.out-of-stock {
 		color: $woocommerce__color-error;
 	}
+}
+span.onsale {
+	top: 1.5em;
+	left: 2em;
+	padding: 9px;
+	position: absolute;
+	z-index: 2;
+	background: greenyellow;
+	border-radius: 50%;
+	color: darkslategray;
+}
+
+form.cart {
+	display: flex;
+	margin-bottom: 3rem;
+}
+.quantity {
+	margin-right: .5rem;
+}
+
+.input-text.qty.text{
+  width: 4.235801032em;
+  text-align: center;
+  padding: 0.5em;
+  font-size: 1.3rem;
+}
+
+button.single_add_to_cart_button.button.alt {
+	padding: 1rem;
+	font-size: 1.2rem;
+	border: none;
+	background: black;
+	color: white;
+	border-radius: unset;
 }
