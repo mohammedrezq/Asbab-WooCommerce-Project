@@ -36,15 +36,42 @@ if ( ! $checkout->is_registration_enabled() && $checkout->is_registration_requir
 		<?php do_action( 'woocommerce_checkout_before_customer_details' ); ?>
 
 		<div class="col2-set col-md-8" id="customer_details">
+            <div id="accordion">
+                <div class="card">
+                    <div class="card-header" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Checkout Billing </button>
+                        </h5>
+                    </div>
+
+    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+        <div class="card-body">
 			<div class="col-md-12">
 				<?php do_action( 'woocommerce_checkout_billing' ); ?>
 			</div>
+        </div>
+    </div>
 
-			<div class="col-md-12">
-				<?php do_action( 'woocommerce_checkout_shipping' ); ?>
-			</div>
-		</div>
 
+    <div class="card">
+        <div class="card-header" id="headingTwo">
+            <h5 class="mb-0">
+                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Checkout Shipping
+                </button>
+            </h5>
+        </div>
+            <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                <div class="card-body">
+		        	<div class="col-md-12">
+				    <?php do_action( 'woocommerce_checkout_shipping' ); ?>
+			        </div>
+		    </div>
+        </div>
+    </div>
+</div>
+            </div>
+        </div>
 		<?php do_action( 'woocommerce_checkout_after_customer_details' ); ?>
 
 	<?php endif; ?>
