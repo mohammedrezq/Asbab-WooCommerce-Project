@@ -115,3 +115,39 @@ button.single_add_to_cart_button.button.alt {
 	color: white;
 	border-radius: unset;
 }
+
+/* for swatches variations woocommerce plugin css editing*/
+tbody > tr > td.label {
+	padding: 0 !important;
+
+	label {
+		font-size: 1.5rem;
+		color: #004380;
+		text-transform: uppercase;
+	}
+}
+	table.variations{
+		width: 100%;
+		margin: 0;
+
+		tbody {
+
+			tr {
+				display: table-cell;
+			}
+		}
+	}
+
+	form.variations_form.cart {
+		display: block;
+	}
+	.woocommerce-variation-add-to-cart {
+		display: flex;
+	}
+
+.stock.in-stock {
+	font-size: 1.2rem;
+	color: red;
+	font-weight: 500;
+	margin-top: 1.5rem;
+}
