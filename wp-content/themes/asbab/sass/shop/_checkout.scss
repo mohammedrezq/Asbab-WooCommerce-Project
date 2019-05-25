@@ -48,3 +48,22 @@ div#order_review {
 .woocommerce-form-coupon-toggle {
 	margin-bottom: 1rem;
 }
+
+/* Checkout Accordion Styling */
+
+h4.panel-title > a {
+	background: #f4f4f4;
+	height: 27px;
+	line-height: 27px;
+	display: flex;
+	align-items: center;
+	padding: 0 9px;
+	position: relative;
+	font-size: 16px;
+	font-weight: 600;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	/* margin-bottom: 10px; */
+	font-family: Poppins, sans-serif;
+	cursor: pointer;
+}
