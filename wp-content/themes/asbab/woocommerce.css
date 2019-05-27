@@ -879,13 +879,13 @@ p.no-comments {
 /**
  * WooCommerce widgets
  */
-@media screen and (min-width: 792px) {
-	.woocommerce > .row > .col-md-3 {
+@media screen and (min-width: 768px) {
+	.woocommerce > .row > .col-sm-3 {
 		float: right;
 	}
 }
 
-.woocommerce > .row > .col-md-3 nav.woocommerce-MyAccount-navigation ul {
+.woocommerce > .row > .col-sm-3 nav.woocommerce-MyAccount-navigation ul {
 	list-style: none;
 	margin-left: 0;
 }
@@ -895,9 +895,96 @@ nav.woocommerce-MyAccount-navigation > ul > li {
 	padding: 1rem;
 }
 
-ul > li.is-active > a {
-	background: #f1f1f1;
-	color: red;
+nav.woocommerce-MyAccount-navigation > ul > li.is-active > a:after {
+	color: #c43b68;
+	font-size: 1.1rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li > a {
+	color: #c43b68;
+	display: flex;
+	justify-content: space-between;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li:nth-child(1) > a:after {
+	content: "\f3fd";
+	font-family: fontAwesome;
+	color: #c49ab4;
+	font-size: 1.3rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li:nth-child(2) > a:after {
+	content: "\f217";
+	font-family: fontAwesome;
+	color: #c49ab4;
+	font-size: 1.3rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li:nth-child(3) > a:after {
+	content: "\f019";
+	font-family: fontAwesome;
+	color: #c49ab4;
+	font-size: 1.3rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li:nth-child(4) > a:after {
+	content: "\f2bb";
+	font-family: fontAwesome;
+	color: #c49ab4;
+	font-size: 1.3rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li:nth-child(5) > a:after {
+	content: "\f2bd";
+	font-family: fontAwesome;
+	color: #c49ab4;
+	font-size: 1.3rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li:nth-child(6) > a:after {
+	content: "\f2bd";
+	font-family: fontAwesome;
+	color: #c49ab4;
+	font-size: 1.3rem;
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li.is-active > a:after {
+	color: #c43b68;
+}
+
+table thead th {
+	padding: 1.41575em;
+	vertical-align: middle;
+}
+
+table th {
+	background-color: #f8f8f8;
+}
+
+table tbody td {
+	background-color: #fdfdfd;
+}
+
+table td, table th {
+	padding: 1em 1.41575em;
+	text-align: left;
+	vertical-align: top;
+}
+
+@media (min-width: 768px) {
+	table.shop_table_responsive tbody tr td, table.shop_table_responsive tbody tr th {
+		text-align: left;
+	}
+}
+
+@media (max-width: 767.99px) {
+	table.shop_table_responsive tr td {
+		display: block;
+		text-align: right;
+		clear: both;
+		font-size: 1.2rem;
+		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+	}
 }
 
 /*# sourceMappingURL=../asbab/sass/maps/woocommerce.css.map */

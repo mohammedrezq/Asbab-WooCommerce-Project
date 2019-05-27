@@ -411,7 +411,7 @@ function asbab_continue_shopping_after_cart_totals_2(){
 add_action('woocommerce_before_account_navigation','myaccount_grid_cols', 10);
 
 function myaccount_grid_cols(){
-    echo "<div class='col-md-3'>";
+    echo "<div class='col-sm-3'>";
 }
 add_action('woocommerce_after_account_navigation','myaccount_closing_grid_cols', 10);
 
@@ -425,7 +425,7 @@ function myaccount_closing_grid_cols(){
 add_action('woocommerce_account_navigation','myaccount_content_grid_cols', 10);
 
 function myaccount_content_grid_cols(){
-    echo "<div class='col-md-9'>";
+    echo "<div class='col-sm-9'>";
 }
 add_action('woocommerce_account_content','myaccount_content_closing_grid_cols', 10);
 
