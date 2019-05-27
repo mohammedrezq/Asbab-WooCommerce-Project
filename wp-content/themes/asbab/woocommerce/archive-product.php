@@ -102,9 +102,9 @@ if ( woocommerce_product_loop() ) {
  *
  * @hooked woocommerce_get_sidebar - 10
  */
-
+echo "<div class='col-lg-3 col-lg-pull-9 col-md-3 col-md-pull-9 col-sm-12 col-xs-12 smt-40 xmt-40'>";
 do_action( 'woocommerce_sidebar' );
-
+echo "</div>";
 
 /**
  * Hook: woocommerce_after_main_content.

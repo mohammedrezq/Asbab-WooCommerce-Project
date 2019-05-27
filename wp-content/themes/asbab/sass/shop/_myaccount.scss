@@ -1,0 +1,27 @@
+
+@media screen and(min-width: 792px) {
+  .woocommerce > .row > .col-md-3 {
+    float: right;
+  }
+}
+
+.woocommerce >.row >.col-md-3 {
+
+  nav.woocommerce-MyAccount-navigation {
+
+    ul {
+      list-style: none;
+      margin-left: 0;
+    }
+  }
+}
+
+nav.woocommerce-MyAccount-navigation > ul > li {
+  border-bottom: 1px solid #efefef;
+  padding: 1rem;
+}
+
+ul > li.is-active > a {
+  background: #f1f1f1;
+  color: red;
+}

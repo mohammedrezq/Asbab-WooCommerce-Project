@@ -403,3 +403,42 @@ function asbab_continue_shopping_after_cart_totals_2(){
 /*remove sidebar from single-product */
 //
 //remove_action('woocommerce_sidebar','woocommerce_get_sidebar',10);
+
+
+
+/*Add columns grid for MyAccount navigation Woocommerce Page */
+
+add_action('woocommerce_before_account_navigation','myaccount_grid_cols', 10);
+
+function myaccount_grid_cols(){
+    echo "<div class='col-md-3'>";
+}
+add_action('woocommerce_after_account_navigation','myaccount_closing_grid_cols', 10);
+
+function myaccount_closing_grid_cols(){
+    echo "</div>";
+}
+
+
+/*Add columns grid for MyAccount content Woocommerce Page */
+
+add_action('woocommerce_account_navigation','myaccount_content_grid_cols', 10);
+
+function myaccount_content_grid_cols(){
+    echo "<div class='col-md-9'>";
+}
+add_action('woocommerce_account_content','myaccount_content_closing_grid_cols', 10);
+
+function myaccount_content_closing_grid_cols(){
+    echo "</div>";
+}
+
+add_action('woocommerce_account_navigation','opening_row_myaccount',2);
+function opening_row_myaccount(){
+    echo"<div class='row'>";
+}
+
+add_action('woocommerce_account_dashboard','closing_row_myaccount',100);
+function closing_row_myaccount(){
+    echo"</div>";
+}
