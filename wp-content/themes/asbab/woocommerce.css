@@ -907,7 +907,7 @@ nav.woocommerce-MyAccount-navigation > ul > li > a {
 }
 
 nav.woocommerce-MyAccount-navigation > ul > li:nth-child(1) > a:after {
-	content: "\f3fd";
+	content: "\F0E4";
 	font-family: fontAwesome;
 	color: #c49ab4;
 	font-size: 1.3rem;
@@ -942,7 +942,7 @@ nav.woocommerce-MyAccount-navigation > ul > li:nth-child(5) > a:after {
 }
 
 nav.woocommerce-MyAccount-navigation > ul > li:nth-child(6) > a:after {
-	content: "\f2bd";
+	content: "\f08b";
 	font-family: fontAwesome;
 	color: #c49ab4;
 	font-size: 1.3rem;
@@ -985,6 +985,56 @@ table td, table th {
 		font-size: 1.2rem;
 		border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 	}
+}
+
+.u-column1.col-1.woocommerce-Address,
+.u-column2.col-2.woocommerce-Address {
+	display: block;
+	width: 100%;
+}
+
+.u-column1.col-1.woocommerce-Address address,
+.u-column2.col-2.woocommerce-Address address {
+	font-size: 1.2rem;
+}
+
+@media (min-width: 768px) {
+	.u-columns.woocommerce-Addresses.col2-set.addresses .u-column1.col-1.woocommerce-Address {
+		width: 46.1764705882%;
+		float: left;
+		margin-right: 0.8823529412%;
+	}
+	.u-columns.woocommerce-Addresses.col2-set.addresses .u-column2.col-2.woocommerce-Address {
+		width: 52.9411764706%;
+		float: right;
+		margin-right: 0;
+	}
+}
+
+h3, .h3 {
+	font-size: 1.3rem !important;
+	font-weight: 400;
+}
+
+.woocommerce-Address-title > .asbab-edit-Addresses > h3 {
+	font-weight: 500 !important;
+	line-height: 35px;
+}
+
+.asbab-edit-Addresses {
+	display: flex;
+	justify-content: space-between;
+	background: antiquewhite;
+	padding: 8px;
+}
+
+.asbab-edit-Addresses > a.edit {
+	font-size: 1.5rem;
+	color: black;
+}
+
+.asbab-edit-Addresses > a.edit:hover {
+	color: #c43b68;
 }
 
 /*# sourceMappingURL=../asbab/sass/maps/woocommerce.css.map */
