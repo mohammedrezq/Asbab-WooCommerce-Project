@@ -169,3 +169,52 @@ h3, .h3 {
 .asbab-edit-Addresses>a.edit:hover {
   color: #c43b68;
 }
+
+@media (min-width: 992px) and (max-width: 1199.99px) {
+
+  table td, table th {
+    padding: 5px;
+  }
+}
+
+
+@media (max-width: 768px) {
+
+  nav.woocommerce-MyAccount-navigation > ul > li > a {
+  font-size: 1.2rem;
+
+  }
+
+  nav.woocommerce-MyAccount-navigation > ul > li:nth-child(1) > a:after,
+  nav.woocommerce-MyAccount-navigation > ul > li:nth-child(2) > a:after,
+  nav.woocommerce-MyAccount-navigation > ul > li:nth-child(3) > a:after,
+  nav.woocommerce-MyAccount-navigation > ul > li:nth-child(4) > a:after,
+  nav.woocommerce-MyAccount-navigation > ul > li:nth-child(5) > a:after,
+  nav.woocommerce-MyAccount-navigation > ul > li:nth-child(6) > a:after {
+
+    font-size: 1.9rem !important;
+  }
+}
+
+a.woocommerce-button.button.view {
+  color: black;
+  //border: 2px solid;
+  padding: .5rem;
+  background: #ececec;
+
+}
+a.woocommerce-button.button.view:hover{
+  background: greenyellow;
+}
+
+a.woocommerce-button.button.view:after {
+  content: "\f06e";
+  font-family: $font__awesome;
+  color: gray;
+  font-weight: 900;
+  line-height: inherit;
+  vertical-align: baseline;
+  //content: "\f06e";
+  margin-left: .5407911001em;
+  /* margin-left: .8rem; */
+}

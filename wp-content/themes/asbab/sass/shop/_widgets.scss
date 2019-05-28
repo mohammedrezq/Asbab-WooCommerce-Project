@@ -62,3 +62,50 @@
 		height: 100%;
 	}
 }
+
+
+/*Woocommerce Widgets Mohammed Rezq*/
+img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.wp-post-image {
+	display: block;
+}
+
+ul.woocommerce-mini-cart.cart_list.product_list_widget {
+	margin: 0;
+	list-style: none;
+}
+
+a.remove.remove_from_cart_button {
+  font-size: 1.3rem;
+}
+
+a.button.wc-forward {
+	background: greenyellow;
+	padding: 1rem;
+	margin: 0 .2rem 0 0;
+	color: black;
+	font-weight: 500;
+	font-family: "Poppins", sans-serif;
+}
+
+li.woocommerce-mini-cart-item.mini_cart_item {
+	font-size: 1.2rem;
+}
+
+li.woocommerce-mini-cart-item.mini_cart_item > a {
+	display: block;
+	color: green;
+	font-weight: 600;
+	margin-top: 0.5rem;
+}
+
+ul>li > a > img.attachment-woocommerce_thumbnail.size-woocommerce_thumbnail.wp-post-image {
+	margin-bottom: 10px;
+}
+
+ul.products li.product .button {
+	display: block;
+	padding: 5px 10px 5px 10px;
+	background: black;
+	color: greenyellow;
+	text-align: center;
+}
