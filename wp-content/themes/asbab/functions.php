@@ -442,3 +442,24 @@ add_action('woocommerce_account_dashboard','closing_row_myaccount',100);
 function closing_row_myaccount(){
     echo"</div>";
 }
+
+/**
+ * Show cart contents / total Ajax
+ */
+add_filter( 'woocommerce_add_to_cart_fragments', 'woocommerce_header_add_to_cart_fragment' );
+
+function woocommerce_header_add_to_cart_fragment( $fragments ) {
+    global $woocommerce;
+
+    ob_start();
+
+    ?>
+    <a class="cart-customlocation" href="<?php echo esc_url(wc_get_cart_url()); ?>" title="<?php _e('View your shopping cart', 'woothemes'); ?>"><i class="icon-handbag icons"></i>
+        <div class="cart_count_asbab">
+        <?php echo sprintf($woocommerce->cart->cart_contents_count);?>
+        </div>
+    </a>
+    <?php
+    $fragments['a.cart-customlocation'] = ob_get_clean();
+    return $fragments;
+}

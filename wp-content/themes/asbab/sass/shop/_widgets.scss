@@ -109,3 +109,17 @@ ul.products li.product .button {
 	color: greenyellow;
 	text-align: center;
 }
+
+a.woocommerce-button.button.view:hover:after {
+	color: black;
+}
+
+li.woocommerce-mini-cart-item.mini_cart_item > a.remove.remove_from_cart_button {
+	color: black;
+	display: inline-block;
+	font-size: 1.6rem;
+}
+
+li.woocommerce-mini-cart-item.mini_cart_item > a.remove.remove_from_cart_button:hover {
+	color: red;
+}

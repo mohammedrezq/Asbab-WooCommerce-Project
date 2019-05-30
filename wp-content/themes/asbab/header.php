@@ -171,8 +171,10 @@
                                     <a href="#"><i class="icon-user icons"></i></a>
                                 </div>
                                 <div class="htc__shopping__cart">
-                                    <a class="cart__menu" href="#"><i class="icon-handbag icons"></i></a>
-                                    <a href="#"><span class="htc__qua">2</span></a>
+<!--                                    // Use in conjunction with https://gist.github.com/woogists/c0a86397015b88f4ca722782a724ff6c-->
+
+                                    <a class="cart-customlocation" href="<?php echo wc_get_cart_url(); ?>" title="<?php _e( 'View your shopping cart' ); ?>"><i class="icon-handbag icons"></i><?php echo sprintf ( _n( '%d', '%d', WC()->cart->get_cart_contents_count() ), WC()->cart->get_cart_contents_count() ); ?></a>
+
                                 </div>
                             </div>
                         </div>
