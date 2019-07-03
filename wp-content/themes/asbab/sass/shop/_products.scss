@@ -42,17 +42,16 @@ ul.products {
 		}
 	}
 
-	.columns-1 {
+	.columns-3.column-list {
 		ul.products {
 			li.product {
-				float: none;
 				width: 100%;
 			}
 		}
 	}
 
 	@for $i from 2 through 6 {
-		.columns-#{$i} {
+		.columns-#{$i}.column-grid {
 			ul.products {
 				li.product {
 					@include column-width( $i );

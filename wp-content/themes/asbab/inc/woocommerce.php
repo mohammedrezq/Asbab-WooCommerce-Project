@@ -129,7 +129,7 @@ if ( ! function_exists( 'asbab_woocommerce_product_columns_wrapper' ) ) {
 	 */
 	function asbab_woocommerce_product_columns_wrapper() {
 		$columns = asbab_woocommerce_loop_columns();
-		echo '<div class="columns-' . absint( $columns ) . '">';
+		echo '<div class="columns-' . absint( $columns ) . ' column-grid">';
 	}
 }
 add_action( 'woocommerce_before_shop_loop', 'asbab_woocommerce_product_columns_wrapper', 40 );

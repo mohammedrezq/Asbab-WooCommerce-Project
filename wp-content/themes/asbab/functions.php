@@ -405,6 +405,21 @@ function asbab_continue_shopping_after_cart_totals_2(){
 //remove_action('woocommerce_sidebar','woocommerce_get_sidebar',10);
 
 
+/*
+ * Add list/grid button for toggle links
+ * */
+function toggle_list_grid(){
+    $toggle_grid_list = '';
+    $toggle_grid_list .= "<div class='buttons'>
+        <button class='asbab-grid'>Grid View</button>
+        <button class='asbab-list'>List View</button>
+    </div>";
+
+    return $toggle_grid_list;
+}
+
+add_action('loop_start','toggle_list_grid',50);
+
 
 /*Add columns grid for MyAccount navigation Woocommerce Page */
 

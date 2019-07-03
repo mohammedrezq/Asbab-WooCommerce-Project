@@ -47,7 +47,12 @@ do_action( 'woocommerce_before_main_content' );
 	?>
 </header>
 
+
+
 <?php
+
+
+
 if ( woocommerce_product_loop() ) {
 
 	/**
@@ -64,9 +69,23 @@ if ( woocommerce_product_loop() ) {
 
 	woocommerce_product_loop_start();
 
-	if ( wc_get_loop_prop( 'total' ) ) {
+
+
+    /**
+     * Hook: loop_start.
+     *
+     * @hooked toggle_list_grid - 50
+     */
+
+    do_action('loop_start');
+
+    echo toggle_list_grid();
+
+
+    if ( wc_get_loop_prop( 'total' ) ) {
 		while ( have_posts() ) {
 			the_post();
+
 
 			/**
 			 * Hook: woocommerce_shop_loop.

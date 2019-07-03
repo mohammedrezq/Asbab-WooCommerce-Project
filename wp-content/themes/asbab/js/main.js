@@ -428,6 +428,18 @@
 
 
 
+    /*-----------------------------------------------
+        20 Toggle list/grid
+    -------------------------------------------------*/
+
+    $('button').on('click',function(e) {
+        if ($(this).hasClass('asbab-grid')) {
+            $('.col-lg-9 > div:nth-of-type(2)').removeClass('column-list').addClass('column-grid');
+        }
+        else if($(this).hasClass('asbab-list')) {
+            $('.col-lg-9 > div:nth-of-type(2)').removeClass('column-grid').addClass('column-list');
+        }
+    });
 
 })(jQuery);
 

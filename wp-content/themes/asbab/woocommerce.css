@@ -119,23 +119,22 @@ ul.products li.product .button {
 	ul.products li.product.last {
 		margin-right: 0;
 	}
-	.columns-1 ul.products li.product {
-		float: none;
+	.columns-3.column-list ul.products li.product {
 		width: 100%;
 	}
-	.columns-2 ul.products li.product {
+	.columns-2.column-grid ul.products li.product {
 		width: 48.1%;
 	}
-	.columns-3 ul.products li.product {
+	.columns-3.column-grid ul.products li.product {
 		width: 30.79667%;
 	}
-	.columns-4 ul.products li.product {
+	.columns-4.column-grid ul.products li.product {
 		width: 22.15%;
 	}
-	.columns-5 ul.products li.product {
+	.columns-5.column-grid ul.products li.product {
 		width: 16.96%;
 	}
-	.columns-6 ul.products li.product {
+	.columns-6.column-grid ul.products li.product {
 		width: 13.49333%;
 	}
 }

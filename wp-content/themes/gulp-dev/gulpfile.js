@@ -1,4 +1,4 @@
-const themename = 'asbab';
+const themename = 'mowp';
 
 const gulp = require('gulp'),
 // Prepare and optimize code etc
